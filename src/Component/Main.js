@@ -124,7 +124,8 @@ export default class Main extends Component {
       }
       
   };
-  
+ 
+  /*
   operacaoInput = (event) => {
     const {num, num2, operador} = this.state
     this.setState({
@@ -159,6 +160,20 @@ export default class Main extends Component {
       })
     }
 
+  }
+
+  usei essa lógica primeiro, depois aprendi a função eval.
+  comentei para deixar salva as duas possibilidades de resolver. 
+  */
+
+  calcular =(event) =>{
+    const {num, num2, operador} = this.state
+    if(num){
+      this.setState({
+        num: eval(num)
+  
+      })
+    }
   }
 
   porcentagem = (event) => {
@@ -199,7 +214,7 @@ export default class Main extends Component {
             <Botao onClick={this.Limpar}>AC</Botao>
             <Botao onClick={this.sinal}> +/- </Botao>
             <Botao onClick={this.porcentagem} >%</Botao>
-            <Botao onClick={this.operacaoInput} value={"/"}>&divide;</Botao>
+            <Botao onClick={this.handleChange3}  value={"/"}>&divide;</Botao>
             
 
             
@@ -208,7 +223,7 @@ export default class Main extends Component {
             <Botaonum onClick={this.handleChange3} value={7}>7</Botaonum>
             <Botaonum onClick={this.handleChange3} value={8}>8</Botaonum>
             <Botaonum onClick={this.handleChange3} value={9}>9</Botaonum>
-            <Botao onClick={this.operacaoInput} value={"*"}>X</Botao>
+            <Botao onClick={this.handleChange3} value={"*"}>X</Botao>
             
             
             </Ope>
@@ -216,7 +231,7 @@ export default class Main extends Component {
             <Botaonum onClick={this.handleChange3} value={4}>4</Botaonum>
             <Botaonum onClick={this.handleChange3} value={5}>5</Botaonum>
             <Botaonum onClick={this.handleChange3} value={6}>6</Botaonum>  
-            <Botao onClick={this.operacaoInput} value={"-"}>-</Botao>
+            <Botao onClick={this.handleChange3} value={"-"}>-</Botao>
             
             
             </Ope>
@@ -224,7 +239,7 @@ export default class Main extends Component {
             <Botaonum onClick={this.handleChange3} value={1}>1</Botaonum>
             <Botaonum onClick={this.handleChange3} value={2}>2</Botaonum>
             <Botaonum onClick={this.handleChange3} value={3}>3</Botaonum>
-            <Botao onClick={this.operacaoInput} value={"+"}>+</Botao>
+            <Botao onClick={this.handleChange3} value={"+"}>+</Botao>
             
             
             </Ope>
