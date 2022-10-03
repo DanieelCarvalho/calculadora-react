@@ -6,6 +6,11 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         margin: 0;
         box-sizing: border-box;
+        @media screen and (max-width: 1023px) {
+        background-color:#34393c;
+
+  }
+
       
     }
 `
@@ -19,7 +24,8 @@ export const Container= styled.main`
   align-items: center;
   width: 100%;
   @media screen and (max-width: 1023px) {
-    
+  background-color:#34393c;
+
   }
 
 
@@ -40,12 +46,13 @@ export const Principal = styled.div`
     width:80%;
     height: 250px;
     font-size: clamp(5px, 30vw, 2rem);
+
   }
  
   @media screen and (max-width: 1023px) {
     width: 100%;
     height: 100%;
-
+    border-radius: 0%;
 
   }
 
@@ -57,12 +64,10 @@ export const Ope = styled.div`
   justify-content:  space-evenly;
   align-items: center;
   width:100%;
-  height: 328.5px;
-
-  
-
+  height: 100%;
  
 `;
+
 export const Botaonum = styled.button`
   width: 4vw;
   height: 52.56px;
