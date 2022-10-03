@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Principal, Ope,  Botaonum, Botao, Result,  } from "./Style";
+import { Container, Principal, Ope,  Botaonum, Botao, Result, GlobalStyle  } from "./Style";
 
 
 export default class Main extends Component {
@@ -112,6 +112,7 @@ export default class Main extends Component {
   render() {
     return (
           <Container>
+            <GlobalStyle/>
             
             <Principal>
             <h1>{this.state.num} </h1>
